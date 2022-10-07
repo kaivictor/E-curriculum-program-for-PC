@@ -17,7 +17,7 @@ class WebAnalysis():
             self.driver.get(教务系统url)
             time.sleep(2)
             账号=input("请输入您的学号-")
-            self.driver.find_element(By.XPATH,"//*[@id='username']").send_keys("2022444422")
+            self.driver.find_element(By.XPATH,"//*[@id='username']").send_keys(账号)
             密码 = maskpass.askpass(prompt="请输入账户密码-")
             self.driver.find_element(By.XPATH,"//*[@id='password']").send_keys(密码)
             self.driver.find_element(By.XPATH,"//*[@id='login_text']/table/tbody/tr[4]/td[2]/input[1]").click()
